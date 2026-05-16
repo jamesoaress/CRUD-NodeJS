@@ -1,0 +1,53 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    //"module": "nodenext",
+    //"target": "esnext",
+    "types": ["node"], // restringe tipos globais ao Node
+    // For nodejs:
+    // "lib": ["esnext"],
+    // and npm install -D @types/node
+
+    "target": "esnext", // define versão do JavaScript gerado
+    "module": "node16", // formato de import/export segundo regras do Node 16
+    "moduleResolution": "node16", // busca arquivos importados como no Node 16
+    "allowImportingTsExtensions": false, // não permite escrever ".ts" no caminho do import
+
+
+
+    // Other Outputs
+    "sourceMap": true, // gera source map (.map)
+    "declaration": true, // gera declarações .d.ts
+    "declarationMap": true, // gera mapa ligado aos .d.ts
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true, // acesso por índice inclui undefined no tipo
+    "exactOptionalPropertyTypes": true, // propriedade opcional segue sem misturar com undefined livre
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true, // liga todas as flags strict padrão
+    "jsx": "react-jsx", // modo de sintaxe JSX
+    "isolatedModules": true, // exige código transpilável arquivo a arquivo
+    "noUncheckedSideEffectImports": true, // imports só por efeito precisam de tipo conhecido
+    "moduleDetection": "force", // trata qualquer arquivo como módulo
+
+    "skipLibCheck": true, // não tipo-checkea arquivos .d.ts de dependências
+
+    "experimentalDecorators": true, // habilita decoradores (@...)
+    "emitDecoratorMetadata": true // inclui metadata em runtime para decoradores
+  }
+}
